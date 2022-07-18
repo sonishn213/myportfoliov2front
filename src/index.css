@@ -23,13 +23,13 @@
   .skillicon {
     fill: #ffffff;
   }
-  p .p1 {
+  .p1 {
     @apply text-2xl font-light text-neutral-300;
   }
-  p .p2 {
+  .p2 {
     @apply text-lg font-light text-neutral-300;
   }
-  p .p3 {
+  .p3 {
     @apply text-base font-light text-neutral-300;
   }
 }

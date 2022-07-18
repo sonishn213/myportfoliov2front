@@ -2,7 +2,7 @@ import bgmain from "../../../../Assets/images/bgmain.svg";
 
 const Herosection = () => {
   return (
-    <section className="relative">
+    <section className="relative border-b-2 border-b-teal-400">
       <div className=" ">
         <div className="h-screen relative w-full overflow-hidden">
           <div className="h-full bg-black/40 absolute top-0 left-0 z-10 w-full flex justify-center items-center text-center">
@@ -14,7 +14,7 @@ const Herosection = () => {
             </div>
           </div>
           <div className="w-full blur-[160px] opacity-85">
-            <img src={bgmain} alt="background image" className="w-full" />
+            <img src={bgmain} alt="background " className="w-full" />
           </div>
         </div>
       </div>

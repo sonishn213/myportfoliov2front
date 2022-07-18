@@ -12,6 +12,9 @@
   h2 {
     @apply text-4xl font-light text-neutral-300;
   }
+  h3 {
+    @apply text-lg font-light text-neutral-300;
+  }
 }
 @layer components {
   .f-container {

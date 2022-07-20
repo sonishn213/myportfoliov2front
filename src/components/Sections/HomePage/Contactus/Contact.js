@@ -34,12 +34,15 @@ const Contact = () => {
     try {
       setLoading(true);
       const res = await axios.post(url, { data: inputData });
-      alert("Your message is safely received");
-      setInputData({
-        name: "",
-        email: "",
-        message: "",
-      });
+      if (res) {
+        console.log(res, "success message");
+        alert("Your message is safely received");
+        setInputData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      }
     } catch (error) {
       alert("Message not sent");
     } finally {

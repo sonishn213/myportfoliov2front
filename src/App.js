@@ -4,7 +4,7 @@ import Navbar from "./components/Navigation/Navbar/Navbar";
 import Footer from "./components/Navigation/Footer/Footer";
 function App() {
   return (
-    <main className="bg-neutral-900 relative">
+    <main className="bg-zinc-900 relative">
       <Navbar />
       <Home />
       <Footer />

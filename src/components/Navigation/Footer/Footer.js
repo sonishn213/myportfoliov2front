@@ -4,8 +4,10 @@ import { BsLinkedin, BsGithub } from "react-icons/bs";
 const Footer = () => {
   return (
     <footer className="border-y-2 border-teal-300 bg-teal-900">
-      <div className="f-container text-teal-300 py-10 flex justify-between items-center">
-        <p className=".p3">DESIGNED AND DEVELOPED BY SHWANEES</p>
+      <div className="f-container text-teal-300 py-4 md:py-10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <p className="p3 tracking-wider  text-teal-300">
+          DESIGNED AND DEVELOPED BY SHWANEES
+        </p>
         <div className="space-x-6 flex text-xl ">
           <div className="cursor-pointer hover:text-teal-100">
             <a target="_blank" href="">

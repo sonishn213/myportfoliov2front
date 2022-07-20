@@ -7,18 +7,18 @@
     @apply font-slab;
   }
   h1 {
-    @apply text-6xl font-light text-neutral-300;
+    @apply text-3xl font-light text-zinc-300 md:text-4xl lg:text-5xl xl:text-6xl;
   }
   h2 {
-    @apply text-4xl font-light text-neutral-300;
+    @apply text-2xl font-light text-zinc-300 md:text-3xl lg:text-4xl xl:text-4xl;
   }
   h3 {
-    @apply text-lg font-light text-neutral-300;
+    @apply text-base md:text-lg  font-medium text-zinc-300;
   }
 }
 @layer components {
   .f-container {
-    @apply max-w-[1110px] mx-auto px-4 md:px-0;
+    @apply max-w-[1110px] mx-auto px-4 xl:px-0;
   }
   .navactive {
     @apply text-teal-400  font-semibold;
@@ -27,12 +27,15 @@
     fill: #ffffff;
   }
   .p1 {
-    @apply text-2xl font-light text-neutral-300;
+    @apply text-base  md:text-xl lg:text-2xl font-light text-zinc-300;
   }
   .p2 {
-    @apply text-lg font-light text-neutral-300;
+    @apply text-base  font-light text-zinc-300;
   }
   .p3 {
-    @apply text-base font-light text-neutral-300;
+    @apply text-[0.6rem] md:text-xs font-light text-zinc-300;
+  }
+  .hidehighlight {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 }

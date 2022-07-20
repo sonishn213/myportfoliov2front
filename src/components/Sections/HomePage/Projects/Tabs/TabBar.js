@@ -10,7 +10,7 @@ const TabBar = ({ setFilter }) => {
     setFilter(name);
   };
   return (
-    <div className="flex space-x-4">
+    <div className="flex md:space-x-4 space-x-2 justify-center md:justify-start">
       <Tab
         title="All"
         name="All"

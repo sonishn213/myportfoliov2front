@@ -4,8 +4,15 @@ import ProjectCard from "./ProjectCard";
 import TabBar from "./Tabs/TabBar";
 import axios from "axios";
 const Project = () => {
+  //api links
+  const BACKEND_API =
+    process.env.REACT_ENV === "development"
+      ? "http://localhost:1337"
+      : process.env.API_URL;
+
   const [projects, setProjects] = useState([]);
   const [filter, setFilter] = useState("All");
+
   useEffect(() => {
     let filterStr = "";
     if (filter === "All") {
@@ -16,8 +23,9 @@ const Project = () => {
     }
   }, [filter]);
 
+  //get projects from database
   const getProjects = async (filterStr) => {
-    const url = "http://localhost:1337/api/projects?populate=*" + filterStr;
+    const url = `${BACKEND_API}/api/projects?populate=*` + filterStr;
     const res = await axios.get(url);
     console.log(res?.data.data);
     setProjects(res?.data.data);
@@ -25,24 +33,27 @@ const Project = () => {
   return (
     <section className="pt-20">
       <div className="f-container">
-        <SectionTitle>Projects</SectionTitle>
-        <div className="mt-10">
+        <div className="text-center md:text-left">
+          <SectionTitle>Projects</SectionTitle>
+        </div>
+        <div className="mt-16">
           <TabBar setFilter={setFilter} />
         </div>
-        <div className="grid grid-cols-3 gap-x-4 gap-y-10 w-full mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 md:gap-x-4 gap-y-10 w-full mt-10">
           {projects.map((project) => {
             return (
-              <ProjectCard
-                imgSrc={
-                  "http://localhost:1337" +
-                  project.attributes.preview_image.data.attributes.url
-                }
-                title={project.attributes.name}
-                skilltags={project.attributes.skills}
-                details={project.attributes.details}
-                previewLink={project.attributes.preview_link}
-                sourceLink={project.attributes.souce_link}
-              />
+              <>
+                <ProjectCard
+                  key={project.id}
+                  imgSrc={project.attributes.preview_image.data.attributes.url}
+                  title={project.attributes.name}
+                  skilltags={project.attributes.skills}
+                  details={project.attributes.details}
+                  previewLink={project.attributes.preview_link}
+                  sourceLink={project.attributes.souce_link}
+                  projects={projects}
+                />
+              </>
             );
           })}
         </div>

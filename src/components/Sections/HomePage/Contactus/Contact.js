@@ -29,8 +29,9 @@ const Contact = () => {
 
   //submit input data save to database
   const saveMessage = async () => {
-    console.log(inputData);
+    console.log(process.env.NODE_ENV);
     const url = `${BACKEND_API}/api/messages`;
+    console.log(url);
     try {
       setLoading(true);
       const res = await axios.post(url, { data: inputData });

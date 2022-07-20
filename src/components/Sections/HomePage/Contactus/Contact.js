@@ -29,7 +29,6 @@ const Contact = () => {
 
   //submit input data save to database
   const saveMessage = async () => {
-    console.log(process.env.REACT_APP_ENV);
     const url = `${BACKEND_API}/api/messages`;
     console.log(url);
     try {
@@ -45,6 +44,7 @@ const Contact = () => {
         });
       }
     } catch (error) {
+      alert(process.env.REACT_APP_ENV);
       alert("Message not sent");
     } finally {
       setLoading(false);

@@ -30,12 +30,11 @@ const Contact = () => {
   //submit input data save to database
   const saveMessage = async () => {
     const url = `${BACKEND_API}/api/messages`;
-    console.log(url);
+
     try {
       setLoading(true);
       const res = await axios.post(url, { data: inputData });
       if (res) {
-        console.log(res, "success message");
         alert("Your message is safely received");
         setInputData({
           name: "",
@@ -44,7 +43,6 @@ const Contact = () => {
         });
       }
     } catch (error) {
-      alert(process.env.REACT_APP_ENV);
       alert("Message not sent");
     } finally {
       setLoading(false);

@@ -4,10 +4,10 @@ import InputField from "./InputField";
 import Button from "../../../Globals/Button";
 import axios from "axios";
 const Contact = () => {
-  const BACKEND_API =
-    process.env.REACT_APP_ENV === "development"
-      ? "http://localhost:1337"
-      : process.env.REACT_APP_API_URL;
+  let BACKEND_API = process.env.REACT_APP_API_URL;
+  if (process.env.REACT_APP_ENV === "development") {
+    BACKEND_API = "http://localhost:1337";
+  }
 
   const [inputData, setInputData] = useState({
     name: "",

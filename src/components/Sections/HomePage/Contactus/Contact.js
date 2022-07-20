@@ -4,6 +4,11 @@ import InputField from "./InputField";
 import Button from "../../../Globals/Button";
 import axios from "axios";
 const Contact = () => {
+  const BACKEND_API =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:1337"
+      : process.env.REACT_APP_API_URL;
+
   const [inputData, setInputData] = useState({
     name: "",
     email: "",
@@ -25,7 +30,7 @@ const Contact = () => {
   //submit input data save to database
   const saveMessage = async () => {
     console.log(inputData);
-    const url = "http://localhost:1337/api/messages";
+    const url = `${BACKEND_API}/api/messages`;
     try {
       setLoading(true);
       const res = await axios.post(url, { data: inputData });

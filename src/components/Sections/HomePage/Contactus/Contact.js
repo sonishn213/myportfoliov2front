@@ -5,7 +5,7 @@ import Button from "../../../Globals/Button";
 import axios from "axios";
 const Contact = () => {
   const BACKEND_API =
-    process.env.NODE_ENV === "development"
+    process.env.REACT_APP_ENV === "development"
       ? "http://localhost:1337"
       : process.env.REACT_APP_API_URL;
 
@@ -29,7 +29,7 @@ const Contact = () => {
 
   //submit input data save to database
   const saveMessage = async () => {
-    console.log(process.env.NODE_ENV);
+    console.log(process.env.REACT_APP_ENV);
     const url = `${BACKEND_API}/api/messages`;
     console.log(url);
     try {

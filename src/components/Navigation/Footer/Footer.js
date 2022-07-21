@@ -1,4 +1,3 @@
-import React from "react";
 import { SiGmail } from "react-icons/si";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 const Footer = () => {
@@ -10,17 +9,20 @@ const Footer = () => {
         </p>
         <div className="space-x-6 flex text-xl ">
           <div className="cursor-pointer hover:text-teal-100">
-            <a target="_blank" href="">
-              <SiGmail />
-            </a>
-          </div>
-          <div className="cursor-pointer hover:text-teal-100">
-            <a target="_blank" href="https://www.linkedin.com/in/shwanees213/">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/shwanees213/"
+              rel="noreferrer"
+            >
               <BsLinkedin />
             </a>
           </div>
           <div className="cursor-pointer hover:text-teal-100">
-            <a target="_blank" href="https://github.com/sonishn213">
+            <a
+              target="_blank"
+              href="https://github.com/sonishn213"
+              rel="noreferrer"
+            >
               <BsGithub />
             </a>
           </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./project.css";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 import { BsCode } from "react-icons/bs";
@@ -76,6 +76,7 @@ const ProjectCard = ({
               <a
                 href={previewLink}
                 target="_blank"
+                rel="noreferrer"
                 className="block  text-teal-400 text-base font-slab font-light cursor-pointer "
               >
                 <div className="flex items-center space-x-2">
@@ -86,6 +87,7 @@ const ProjectCard = ({
               <a
                 href={sourceLink}
                 target="_blank"
+                rel="noreferrer"
                 className="block  text-teal-400 text-base font-slab font-light cursor-pointer "
               >
                 <div className="flex items-center space-x-2">

@@ -1,9 +1,8 @@
-import React from "react";
 import SectionTitle from "../../../Globals/SectionTitle";
 
 const About = () => {
   return (
-    <section>
+    <section id="about">
       <div className="f-container pt-20 text-center md:text-left">
         <SectionTitle>About me </SectionTitle>
         <div className="mt-10 md:w-3/4 ">

@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply scroll-smooth;
+  }
   nav {
     @apply font-slab;
   }

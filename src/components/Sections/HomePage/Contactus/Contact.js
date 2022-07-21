@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import SectionTitle from "../../../Globals/SectionTitle";
 import InputField from "./InputField";
 import Button from "../../../Globals/Button";
@@ -50,7 +50,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20">
+    <section className="py-20" id="contact">
       <div className="f-container">
         <div className="text-center md:text-left">
           <SectionTitle>Contact</SectionTitle>

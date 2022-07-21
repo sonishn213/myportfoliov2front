@@ -31,7 +31,7 @@ const Project = () => {
     setProjects(res?.data.data);
   };
   return (
-    <section className="pt-20">
+    <section className="pt-20" id="projects">
       <div className="f-container">
         <div className="text-center md:text-left">
           <SectionTitle>Projects</SectionTitle>

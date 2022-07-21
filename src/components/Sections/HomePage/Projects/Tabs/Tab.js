@@ -1,5 +1,3 @@
-import React from "react";
-
 const Tab = ({ title, active, onClick, name }) => {
   let activeClass = "";
   if (active === "active") {

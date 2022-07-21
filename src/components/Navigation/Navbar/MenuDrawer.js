@@ -25,19 +25,20 @@ export default function MenuDrawer() {
       />
       <Drawer anchor={anchor} open={state} onClose={toggleDrawer(false)}>
         <div className="pt-20 pl-8 w-[200px] text-zinc-300 bg-zinc-900 h-full space-y-4 ">
-          <a href="#" className=" navactive block">
+          <a href="#home" className=" navactive block">
             Home
           </a>
-          <a href="#" className=" block">
-            Skills
-          </a>
-          <a href="#" className=" block">
-            Projects
-          </a>
-          <a href="#" className=" block">
+          <a href="#about" className=" block">
             About me
           </a>
-          <a href="#" className=" block">
+          <a href="#skills" className=" block">
+            Skills
+          </a>
+          <a href="#projects" className=" block">
+            Projects
+          </a>
+
+          <a href="#contact" className=" block">
             Contact
           </a>
         </div>

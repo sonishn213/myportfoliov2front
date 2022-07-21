@@ -9,7 +9,7 @@ const Herosection = () => {
             <div className="f-container">
               <h1 className="leading-tight ">
                 Hello, I'm Shwanees.
-                <br /> I'm a fronted developer.
+                <br /> I'm a front end developer.
               </h1>
             </div>
           </div>

@@ -27,7 +27,7 @@ const ProjectCard = ({
   };
 
   useEffect(() => {
-    if (isflipped.id == id && isflipped.flipped) {
+    if (isflipped.id === id && isflipped.flipped) {
       setLocalFlipped(true);
     } else {
       console.log(isflipped);

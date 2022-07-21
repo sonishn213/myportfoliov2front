@@ -1,7 +1,26 @@
+import { useRef } from "react";
 import MenuDrawer from "./MenuDrawer";
+
 const Navbar = () => {
+  const navbarRef = useRef(null);
+  window.onscroll = () => {
+    let nav = navbarRef.current;
+
+    if (
+      document.body.scrollTop >= nav.clientHeight ||
+      document.documentElement.scrollTop >= nav.clientHeight
+    ) {
+      nav.classList.add("bg-zinc-900/70");
+    } else {
+      nav.classList.remove("bg-zinc-900/70");
+    }
+  };
   return (
-    <header className=" fixed z-30 w-full top-0 left-0 bg-zinc-900/70 ">
+    <header
+      className=" fixed z-30 w-full top-0 left-0   "
+      ref={navbarRef}
+      style={{ backdropFilter: "blur(4px)" }}
+    >
       <nav className="f-container hidden lg:block">
         <div className="flex justify-center items-center space-x-12 uppercase  text-zinc-300 tracking-wider">
           <a href="#home" className="py-6 navactive">

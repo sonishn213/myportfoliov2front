@@ -6,7 +6,7 @@ import axios from "axios";
 const Project = () => {
   //api links
   const BACKEND_API =
-    process.env.REACT_APP_ENV === "development"
+    process.env.REACT_APP_ENV === "production"
       ? "http://localhost:1337"
       : process.env.REACT_APP_API_URL;
 

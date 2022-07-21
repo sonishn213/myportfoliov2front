@@ -18,6 +18,10 @@ const ProjectCard = ({
     setFlipped(false);
   }, [projects]);
 
+  const flipcard = () => {
+    setFlipped((p) => !p);
+  };
+
   let flipStyle = {
     transform: "rotateY(-180deg)",
   };
@@ -58,14 +62,15 @@ const ProjectCard = ({
         <div className="back absolute h-full top-0 p-4 bg-zinc-900 border border-teal-400">
           <div className=" flex flex-col h-full justify-between">
             <div>
-              <div
-                className="text-teal-400 "
-                onClick={() => {
-                  setFlipped((p) => !p);
-                }}
-              >
-                <HiOutlineArrowNarrowLeft className="ml-auto text-2xl cursor-pointer" />
+              <div className="w-full   flex overflow-hidden ">
+                <div
+                  className="text-teal-400  text-3xl cursor-pointer  "
+                  onClick={flipcard}
+                >
+                  <HiOutlineArrowNarrowLeft />
+                </div>
               </div>
+
               <div className="flex-grow mt-2">
                 <p className="p2 line-clamp-[10] md:line-clamp-[13]">
                   {details}

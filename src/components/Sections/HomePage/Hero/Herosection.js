@@ -13,10 +13,10 @@ const Herosection = () => {
               </h1>
             </div>
           </div>
-          <div className="w-full blur-[160px] opacity-85 hidden md:block">
+          <div className="w-full blur-[80px] opacity-85 hidden md:block">
             <img src={bgmain} alt="background pc" className="w-full " />
           </div>
-          <div className="w-full blur-[35px]  md:hidden ">
+          <div className="w-full blur-[34px]  md:hidden ">
             <img src={bgmobile} alt="background mobile " className="w-full  " />
           </div>
         </div>

@@ -3,6 +3,7 @@ import SectionTitle from "../../../Globals/SectionTitle";
 import ProjectCard from "./ProjectCard";
 import TabBar from "./Tabs/TabBar";
 import axios from "axios";
+
 const Project = () => {
   //api links
   const BACKEND_API =
@@ -30,6 +31,10 @@ const Project = () => {
     console.log(res?.data.data);
     setProjects(res?.data.data);
   };
+
+  //card flip state
+  const [isflipped, setFlipped] = useState({ id: "", flipped: false });
+
   return (
     <section className="pt-20" id="projects">
       <div className="f-container">
@@ -51,6 +56,9 @@ const Project = () => {
                   details={project.attributes.details}
                   previewLink={project.attributes.preview_link}
                   sourceLink={project.attributes.souce_link}
+                  isflipped={isflipped}
+                  setFlipped={setFlipped}
+                  id={project.id}
                   projects={projects}
                 />
               </>

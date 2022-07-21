@@ -3,6 +3,7 @@ import "./project.css";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 import { BsCode } from "react-icons/bs";
 import { FaRegEye } from "react-icons/fa";
+
 const ProjectCard = ({
   title,
   skilltags,
@@ -10,24 +11,41 @@ const ProjectCard = ({
   previewLink,
   sourceLink,
   imgSrc,
+  isflipped,
+  setFlipped,
+  id,
   projects,
 }) => {
-  const [isflipped, setFlipped] = useState(false);
-
+  //unflip when tab changed
   useEffect(() => {
     setFlipped(false);
   }, [projects]);
 
-  const flipcard = () => {
-    setFlipped((p) => !p);
+  const [localFlipped, setLocalFlipped] = useState(false);
+  const flipcard = (flip) => {
+    setFlipped({ id: id, flipped: flip });
   };
+
+  useEffect(() => {
+    if (isflipped.id == id && isflipped.flipped) {
+      setLocalFlipped(true);
+    } else {
+      console.log(isflipped);
+      setLocalFlipped(false);
+    }
+  }, [isflipped]);
 
   let flipStyle = {
     transform: "rotateY(-180deg)",
   };
+
   return (
     <div className="text-white flip-card relative ">
-      <div className="flip-card-inner " style={isflipped ? flipStyle : {}}>
+      <div
+        className="flip-card-inner "
+        id={id}
+        style={localFlipped ? flipStyle : {}}
+      >
         <div className="front relative bg-zinc-900 border border-zinc-800">
           <div className="bg-gray-400 w-full max-h-60 md:max-h-80 overflow-hidden opacity-90 hover:opacity-95">
             <img src={imgSrc} alt={title} className="w-full" />
@@ -47,9 +65,7 @@ const ProjectCard = ({
             <div>
               <div className="text-right">
                 <a
-                  onClick={() => {
-                    setFlipped((p) => !p);
-                  }}
+                  onClick={() => flipcard(true)}
                   className="cursor-pointer select-none text-base inline-block font-slab text-teal-400   font-light "
                 >
                   LEARN MORE
@@ -65,7 +81,7 @@ const ProjectCard = ({
               <div className="w-full   flex overflow-hidden ">
                 <div
                   className="text-teal-400  text-3xl cursor-pointer  "
-                  onClick={flipcard}
+                  onClick={() => flipcard(false)}
                 >
                   <HiOutlineArrowNarrowLeft />
                 </div>

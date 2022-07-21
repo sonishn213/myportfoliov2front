@@ -17,6 +17,15 @@ export default function MenuDrawer() {
   };
 
   const anchor = "left";
+  const scrollPage = (e) => {
+    const eleId = e.target.getAttribute("name");
+    const element = document.getElementById(eleId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      setState(false);
+    }
+    // alert(eleId);
+  };
   return (
     <>
       <CgMenuRight
@@ -25,22 +34,41 @@ export default function MenuDrawer() {
       />
       <Drawer anchor={anchor} open={state} onClose={toggleDrawer(false)}>
         <div className="pt-20  w-[200px] text-zinc-300 bg-zinc-900 h-full  ">
-          <a href="#home" className=" navactive block py-4 pl-8">
+          <div
+            name="home"
+            className="  block py-4 pl-8 active:bg-zinc-700"
+            onClick={scrollPage}
+          >
             Home
-          </a>
-          <a href="#about" className=" block py-4 pl-8">
+          </div>
+          <div
+            name="about"
+            className="  block py-4 pl-8 active:bg-zinc-700"
+            onClick={scrollPage}
+          >
             About me
-          </a>
-          <a href="#skills" className=" block py-4 pl-8">
+          </div>
+          <div
+            name="skills"
+            className="  block py-4 pl-8 active:bg-zinc-700"
+            onClick={scrollPage}
+          >
             Skills
-          </a>
-          <a href="#projects" className=" block py-4 pl-8">
+          </div>
+          <div
+            name="projects"
+            className="  block py-4 pl-8 active:bg-zinc-700"
+            onClick={scrollPage}
+          >
             Projects
-          </a>
-
-          <a href="#contact" className=" block py-4 pl-8">
+          </div>
+          <div
+            name="contact"
+            className="  block py-4 pl-8 active:bg-zinc-700"
+            onClick={scrollPage}
+          >
             Contact
-          </a>
+          </div>
         </div>
       </Drawer>
     </>

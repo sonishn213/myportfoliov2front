@@ -15,6 +15,7 @@ const Navbar = () => {
       nav.classList.remove("bg-zinc-900/70");
     }
   };
+
   return (
     <header
       className=" fixed z-30 w-full top-0 left-0   "

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import About from "../components/Sections/HomePage/About/About";
 import Contact from "../components/Sections/HomePage/Contactus/Contact";
 import Herosection from "../components/Sections/HomePage/Hero/Herosection";

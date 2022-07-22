@@ -3,6 +3,8 @@ import SectionTitle from "../../../Globals/SectionTitle";
 import InputField from "./InputField";
 import Button from "../../../Globals/Button";
 import axios from "axios";
+import { MdEmail } from "react-icons/md";
+
 const Contact = () => {
   let BACKEND_API = process.env.REACT_APP_API_URL;
   if (process.env.REACT_APP_ENV === "development") {
@@ -52,8 +54,12 @@ const Contact = () => {
   return (
     <section className="py-20" id="contact">
       <div className="f-container">
-        <div className="text-center md:text-left">
+        <div className="text-center md:text-left md:flex md:justify-between md:items-center space-y-4 md:space-y-0 lg:w-3/4">
           <SectionTitle>Contact</SectionTitle>
+          <p className="flex items-center  text-teal-300 selection:bg-teal-300 selection:text-zinc-900 ">
+            <MdEmail className="mr-2 text-xl " />
+            sonishn213@gmail.com
+          </p>
         </div>
         <div className="lg:w-3/4 ">
           <div className="md:flex mt-10 md:mb-12 mb-4 w-full space-y-4 md:space-y-0 md:space-x-4">

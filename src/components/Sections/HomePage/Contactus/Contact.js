@@ -56,7 +56,7 @@ const Contact = () => {
       <div className="f-container">
         <div className="text-center md:text-left md:flex md:justify-between md:items-center space-y-4 md:space-y-0 lg:w-3/4">
           <SectionTitle>Contact</SectionTitle>
-          <p className="flex items-center  text-teal-300 selection:bg-teal-300 selection:text-zinc-900 ">
+          <p className="flex items-center justify-center md:justify-end text-teal-300 selection:bg-teal-300 selection:text-zinc-900 ">
             <MdEmail className="mr-2 text-xl " />
             sonishn213@gmail.com
           </p>
@@ -80,7 +80,7 @@ const Contact = () => {
                 id="email"
                 name="email"
                 label="Email"
-                ph="Enter your name"
+                ph="Enter your email"
                 value={inputData.email}
                 onChange={readData}
               />

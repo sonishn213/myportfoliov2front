@@ -40,6 +40,9 @@ const Navbar = () => {
           <a href="#contact" className="py-6">
             Contact
           </a>
+          <a href="/resume.pdf" target="_blank" className="py-6">
+            Resume
+          </a>
         </div>
       </nav>
       <nav className="f-container text-3xl text-zinc-300 py-4 lg:hidden">

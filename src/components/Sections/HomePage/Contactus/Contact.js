@@ -52,7 +52,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20" id="contact">
+    <section className="py-20 md:py-32" id="contact">
       <div className="f-container">
         <div className="text-center md:text-left md:flex md:justify-between md:items-center space-y-4 md:space-y-0 lg:w-3/4">
           <SectionTitle>Contact</SectionTitle>

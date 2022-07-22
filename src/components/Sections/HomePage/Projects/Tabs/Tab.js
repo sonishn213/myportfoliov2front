@@ -3,10 +3,11 @@ const Tab = ({ title, active, onClick, name }) => {
   if (active === "active") {
     activeClass = "bg-teal-400/50";
   }
+
   return (
     <div
       name={name}
-      className={`cursor-pointer select-none md:text-sm text-xs font-slab uppercase text-zinc-300 border-2 border-teal-400 px-4 py-2 md:px-6 md:py-2 rounded-full transition-all hover:bg-teal-400/50 hidehighlight ${activeClass}`}
+      className={`cursor-pointer select-none md:text-sm text-xs tracking-wider font-slab uppercase text-zinc-300 border-2 border-teal-400 px-4 py-2 md:px-6 md:py-2 rounded-full transition-all hover:bg-teal-400/50 hidehighlight ${activeClass}`}
       onClick={onClick}
     >
       {title}

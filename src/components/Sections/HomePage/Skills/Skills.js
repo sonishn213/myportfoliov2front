@@ -6,7 +6,7 @@ const Skills = () => {
   const svgfill = "fill-zinc-500 lg:fill-zinc-900 hover:fill-teal-500";
   return (
     <section id="skills">
-      <div className="f-container pt-20 text-center md:text-left">
+      <div className="f-container pt-20 md:pt-32  text-center md:text-left">
         <SectionTitle>Skills</SectionTitle>
 
         <div className="md:w-1/2 grid grid-cols-5 md:gap-10 gap-3 mt-10">

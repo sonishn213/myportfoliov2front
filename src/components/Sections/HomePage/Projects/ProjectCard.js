@@ -46,7 +46,7 @@ const ProjectCard = ({
         id={id}
         style={localFlipped ? flipStyle : {}}
       >
-        <div className="front relative bg-zinc-900 border border-zinc-800">
+        <div className="front relative bg-zinc-900 border border-zinc-700">
           <div className="bg-gray-400 w-full max-h-60 md:max-h-80 overflow-hidden opacity-90 hover:opacity-95">
             <img src={imgSrc} alt={title} className="w-full" />
           </div>
@@ -66,7 +66,7 @@ const ProjectCard = ({
               <div className="text-right">
                 <a
                   onClick={() => flipcard(true)}
-                  className="cursor-pointer select-none text-base inline-block font-slab text-teal-400   font-light "
+                  className="cursor-pointer select-none text-base inline-block font-slab text-teal-400   font-light hover:text-teal-300"
                 >
                   LEARN MORE
                 </a>
@@ -80,7 +80,7 @@ const ProjectCard = ({
             <div>
               <div className="w-full   flex overflow-hidden ">
                 <div
-                  className="text-teal-400  text-3xl cursor-pointer  "
+                  className="text-teal-400  text-3xl cursor-pointer  hover:text-teal-300"
                   onClick={() => flipcard(false)}
                 >
                   <HiOutlineArrowNarrowLeft />
@@ -100,7 +100,7 @@ const ProjectCard = ({
                 rel="noreferrer"
                 className="block  text-teal-400 text-base font-slab font-light cursor-pointer "
               >
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 hover:text-teal-300">
                   <FaRegEye />
                   <span> PREVIEW</span>
                 </div>
@@ -111,7 +111,7 @@ const ProjectCard = ({
                 rel="noreferrer"
                 className="block  text-teal-400 text-base font-slab font-light cursor-pointer "
               >
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 hover:text-teal-300">
                   <BsCode />
                   <span> SOURCE CODE</span>
                 </div>

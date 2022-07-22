@@ -7,12 +7,11 @@ const About = () => {
         <SectionTitle>About me </SectionTitle>
         <div className="mt-10 md:w-3/4 ">
           <p className="p1">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don't look even slightly
-            believable. If you are going to use a passage of Lorem Ipsum, you
-            need to be sure there isn't anything embarrassing hidden in the
-            middle of sonish.
+            My name is Shwanees. I am from Mangalore, karnataka. I recently
+            graduated from Sri Dharmastala manjunatheshwara college, ujire after
+            completing Bachelors in Computer Application. I enjoy creating
+            beautiful websites by combining my technical knowledge with my keen
+            eye for design.
           </p>
         </div>
       </div>
